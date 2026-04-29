@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formation Universitaire</title>
+  </head>
+  <body>
+    <h1>Formation Ingénieur Informatique</h1>
+
+    <div class="top-buttons">
+      <button id="darkModeBtn">Mode sombre</button>
+      <button id="loadUsersBtn">Charger utilisateurs</button>
+    </div>
+
+    <div class="main">
+      <section class="presentation">
+        <p>
+          La formation d’ingénieur en informatique permet aux étudiants
+          d’acquérir des compétences solides en programmation, en développement
+          web et mobile, ainsi qu’en intelligence artificielle et en réseaux et
+          sécurité. Elle vise à former des ingénieurs capables de concevoir,
+          développer et sécuriser des systèmes informatiques modernes, tout en
+          s’adaptant aux évolutions technologiques du marché.
+        </p>
+
+        <div class="container">
+          <div>
+            <h2>Modules enseignés :</h2>
+
+            <ul id="modulesList">
+              <li>Réseaux & sécurité</li>
+              <li>Développement Web et mobile</li>
+              <li>Intelligence Artificielle</li>
+            </ul>
+
+            <h3>Ajouter un module</h3>
+            <input type="text" id="moduleInput" placeholder="Nom du module" />
+            <button id="addModuleBtn">Ajouter module</button>
+          </div>
+
+          <div>
+            <p><b>Campus ISGA</b></p>
+            <img
+              src="image-ISGA.webp"
+              width="400"
+              alt="Formation informatique"
+            />
+            <br />
+            <a href="https://www.isga.ma" target="_blank"
+              >Visiter le site ISGA</a
+            >
+          </div>
+
+          <div>
+            <h3>Vidéo</h3>
+            <video width="400" controls muted>
+              <source
+                src="ISGA_la_grande_cole_de_Management_et_dIngnierie.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            <h3>Audio</h3>
+            <audio controls loop>
+              <source src="isga-audio.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Tableau des Modules</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th colspan="3">Modules de la Formation</th>
+            </tr>
+            <tr>
+              <th>Module</th>
+              <th>Volume horaire</th>
+              <th>Responsable</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Réseaux & sécurité</td>
+              <td>45h</td>
+              <td>Pr. Idrissi</td>
+            </tr>
+
+            <tr>
+              <td>Développement Web et mobile</td>
+              <td>40h</td>
+              <td>Pr. Tricha</td>
+            </tr>
+
+            <tr>
+              <td>Intelligence Artificielle</td>
+              <td>35h</td>
+              <td>Pr. Alami</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Formulaire d'inscription</h2>
+
+        <form id="inscriptionForm">
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" name="nom" />
+
+          <label for="prenom">Prénom :</label>
+          <input type="text" id="prenom" name="prenom" />
+
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" />
+
+          <label for="password">Mot de passe :</label>
+          <input type="password" id="password" name="password" />
+
+          <label for="date_naissance">Date de naissance :</label>
+          <input type="date" id="date_naissance" name="date_naissance" />
+
+          <label for="filiere">Filière :</label>
+          <select id="filiere" name="filiere">
+            <option value="">Choisir une filière</option>
+            <option value="ISI">ISI</option>
+            <option value="IA">IA</option>
+            <option value="GI">GI</option>
+          </select>
+
+          <label>Genre :</label>
+          <div class="choice-group">
+            <label
+              ><input type="radio" name="genre" value="homme" /> Homme</label
+            >
+            <label
+              ><input type="radio" name="genre" value="femme" /> Femme</label
+            >
+          </div>
+
+          <label>Modules :</label>
+          <div class="choice-group">
+            <label
+              ><input
+                type="checkbox"
+                name="modules"
+                value="Réseaux & sécurité"
+              />
+              Réseaux & sécurité</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="modules"
+                value="Développement Web et mobile"
+              />
+              Développement Web et mobile</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="modules"
+                value="Intelligence Artificielle"
+              />
+              Intelligence Artificielle</label
+            >
+          </div>
+
+          <button type="submit">Envoyer</button>
+        </form>
+
+        <p id="message"></p>
+
+        <div id="resultat">
+          <h3>Données saisies :</h3>
+          <div id="resultContent"></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="users-section">
+      <h2>Liste des utilisateurs</h2>
+      <ul id="usersList"></ul>
+      <p id="userEmail"></p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
